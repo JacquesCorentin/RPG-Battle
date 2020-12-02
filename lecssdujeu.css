@@ -1,0 +1,120 @@
+body {
+  background-image: url("https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png");
+  background-repeat: no-repeat;
+  background-size: 1600px 796px;
+}
+
+p{
+	margin: -45px -40px;
+	color: #FFFFFF;
+	front-family: arial ;
+}
+
+.box{
+	position: relative;
+}
+
+
+.box{
+  background-color: #000000;
+  width: 400px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 20px;
+  position: absolute;
+  top: 0px ;
+  left: 20px;
+}
+
+.box2{
+	position: relative;
+}
+
+.box2{
+  background-color: #000000;
+  width: 300px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 100px;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}
+
+.box3{
+	position: relative;
+}
+
+.box3{
+  background-color: #000000;
+  width: 30px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 50px;
+  position: absolute;
+  top: 460px;
+  left: 340px;
+  text-align: center;
+  opacity: 0.75
+}
+
+.box4{
+	position: relative;
+}
+
+.box4{
+  background-color: #000000;
+  width: 300px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 59px;
+  position: absolute;
+  top: -5px;
+  left: 140px;
+  text-align: center;
+
+}
+
+.box5{
+	position: relative;
+}
+
+.box5{
+  background-color: #000000;
+  width: 300px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 45px;
+  position: absolute;
+  top: -550px;
+  left: 140px;
+  text-align: center;
+  opacity: 0.75
+}
+
+.container{
+	position: relative;
+}
+
+.container > img{
+	position: absolute;
+	top: 0px ;
+	left: 150px ;
+	
+}
+.progress{
+  position: relative;
+}
+.VieDuMonstre1{
+   background-color: #000000;
+  width: 300px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 45px;
+  position: absolute;
+  top: -550px;
+  left: 140px;
+  text-align: center;
+  opacity: 0.75
+}
