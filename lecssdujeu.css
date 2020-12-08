@@ -1,7 +1,7 @@
 body {
   background-image: url("https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png");
   background-repeat: no-repeat;
-  background-size: 1600px 796px;
+  background-size: cover;
 }
 
 p{
@@ -126,5 +126,5 @@ p{
   border: 5px solid white;
   border-radius: 10px;
   text-align: center;
-  opacity: 1
+  visibility: hidden;
 }
