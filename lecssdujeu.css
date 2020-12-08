@@ -118,3 +118,13 @@ p{
   text-align: center;
   opacity: 0.75
 }
+
+.Infobulle{
+  display: flex;
+  position: relative;
+  background-color: #000000;
+  border: 5px solid white;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 1
+}
