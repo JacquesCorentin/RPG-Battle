@@ -8,8 +8,7 @@
 	
 	</head>
 	<body>
-		<div class="Ennemis"> 
-          <div> Ennemis : </div>
+		<div class="Ennemis">Choix de l'ennemis : </div>
           <button id="btnSlime"> Slime </button>
           <button id="btnSlume"> Slume </button> 
           <button id="btnFlime"> Flime </button> 
@@ -17,7 +16,7 @@
 		<div id="Victoire"> Victoire </div>
 		<div id="Defaite"> Défaite</div>
 
-		<div class="box2">Slime <br>Slume <br>Flime</p> 
+		<div class="box2"> <br> <br>
 		</div>
 		<div class="box3"> <br> <br>  </div>
 		<div class="box4"><p>Antidote :<br>Herbe<br>Objet :<br> -> Pokéball<br>Ressource :<br>Oeil de Dragon</p>
@@ -29,26 +28,27 @@
 
 			<div class="Ennemis1" id="Monstre1">
 				<img id="Ennemis1" src="https://opengameart.org/sites/default/files/slime.jiggle.icon_.png" alt="">
-				<div class="boxMonstre1"><p>NOM: Slime<br> <br>HP: 100<br> <br>DEF: 0</p></div>
+				<div id="boxMonstre1"><p>NOM: Slime<br> <br>HP: <h id=PVSlime>100</h><br><br>DEF: 0</p></div>
 			</div>
 		
 				<div class="Ennemis2" id="Monstre2">
 				<img id="Ennemis2" src="https://opengameart.org/sites/default/files/slime.jiggle.icon_.png" alt="">
-				<div class="boxMonstre2"><p>NOM: Slume<br> <br>HP: 100<br> <br>DEF: 0</p></div>
+				<div id="boxMonstre2"><p>NOM: Slume<br> <br>HP: <h id=PVSlume>100</h><br> <br>DEF: 0</p></div>
 			</div>	
 				<div class="Ennemis3" id="Monstre3">
 				<img id="Ennemis3" src="https://opengameart.org/sites/default/files/slime.jiggle.icon_.png" alt="">
-				<div class="boxMonstre3"><p>NOM: Flime<br> <br>HP: 100<br> <br>DEF: 0</p></div>
+				<div id="boxMonstre3"><p>NOM: Flime<br> <br>HP: <h id=PVFlime>100</h><br> <br>DEF: 0</p></div>
 			</div>
 		</Infobulle>
 
 		<action>
-		<button class="btnAttaque">Attaque</button>
-		<button class="btnDefense">Defense</button>
-		<button class="btnMagie"> Magie</button>
-		<button class="btnObjet">Objets</button>
+		<button class="btnAttaque" id="BoutonAttaque">Attaque</button>
+		<button class="btnDefense" id="BoutonDefense">Defense</button>
+		<button class="btnMagie" id="BoutonMagie"> Magie</button>
+		<button class="btnObjet" id="BoutonObjet">Objets</button>
 		</action>	
 		
+		<script type="text/javascript" src="Lejsdujeu.js"></script>
 
 	</body>
 </html>

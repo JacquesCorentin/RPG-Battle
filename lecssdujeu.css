@@ -19,11 +19,7 @@ body {
   top: 50px;
   left: 40px;
 
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #FFFFFF;
-  font-family: calibri (corps) ;
+  opacity: 0.75
 }
 
 
@@ -75,7 +71,7 @@ body {
 
 
 
-.boxMonstre1{
+#boxMonstre1{
   background-color: #000000;
   width: 30px;
   border: 5px solid white;
@@ -85,10 +81,11 @@ body {
   top: -100px;
   left: -33px;
   text-align: center;
-  opacity: 0.75
+  opacity: 0.75;
+  visibility: hidden;
 }
 
-.boxMonstre2{
+#boxMonstre2{
   background-color: #000000;
   width: 30px;
   border: 5px solid white;
@@ -98,10 +95,11 @@ body {
   top: -100px;
   left: -33px;
   text-align: center;
-  opacity: 0.75
+  opacity: 0.75;
+  visibility: hidden;
 }
 
-.boxMonstre3{
+#boxMonstre3{
   background-color: #000000;
   width: 30px;
   border: 5px solid white;
@@ -111,7 +109,8 @@ body {
   top: -100px;
   left: -33px;
   text-align: center;
-  opacity: 0.75
+  opacity: 0.75;
+  visibility: hidden;
 }
 
 #Victoire{
@@ -152,21 +151,27 @@ body {
   visibility: hidden;
 }
 
-/* gestion des ennemis*/
+/* Les infobulles */
 
 .Ennemis{
   position: absolute;
-  top: 50px;
-  left:40px;
+  top: 55px;
+  left: 45px;
+  color: #FFFFFF;
   z-index: 3;
-
+  font-family: calibri (corps);
+  font-size: 111%;
+  border : solid white;
+  border-radius: 5px;
+  min-height: 31px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  color: #FFFFFF;
+  align-items: center;
+  opacity: 0.75
 }
 
-.Ennemis1{
+
+#Monstre1{
 position: absolute;
 padding: 0px;
 top: 400px;
@@ -174,7 +179,7 @@ left: 570px;
 visibility: visible;
 }
 
-.Ennemis2{
+#Monstre2{
 position: absolute;
 padding: 0px;
 top: 350px;
@@ -182,7 +187,7 @@ left: 770px;
 visibility: visible;
 }
 
-.Ennemis3{
+#Monstre3{
 position: absolute;
 padding: 0px;
 top: 400px;
@@ -208,6 +213,7 @@ visibility: visible;
   display: flex;
   justify-content: center;
   align-items: center;
+
 
   opacity: 0.75;
 }
@@ -271,17 +277,18 @@ visibility: visible;
 }
 
 
-.btnSlime{
+#btnSlime{
   background: #000000;
   color: #FFFFFF;
-  border-radius: 0.4em;
+
   padding: 15px;
-  width: 129px;
+  width: 150px;
   height: 0.5%;
   
   position: absolute;
-  top: 565px;
-  left: 445px;
+  top: 90px;
+  left: 45px;
+  z-index: 3;
   
   display: flex;
   justify-content: center;
@@ -290,18 +297,19 @@ visibility: visible;
   opacity: 0.75;
 }
 
-.btnSlume{
+#btnSlume{
   background: #000000;
   color: #FFFFFF;
-  border-radius: 0.4em;
+
   padding: 15px;
-  width: 129px;
+  width: 150px;
   height: 0.5%;
   
   position: absolute;
-  top: 565px;
-  left: 445px;
-  
+  top: 125px;
+  left: 45px;
+  z-index: 3;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,64 +317,24 @@ visibility: visible;
   opacity: 0.75;
 }
 
-.btnFlime{
+#btnFlime{
   background: #000000;
   color: #FFFFFF;
   border-radius: 0.4em;
   padding: 15px;
-  width: 129px;
+  width: 150px;
   height: 0.5%;
   
   position: absolute;
-  top: 565px;
-  left: 445px;
-  
+  top: 158px;
+  left: 45px;
+  z-index: 3;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   opacity: 0.75;
 }
-/* Les infobulles*/
+/* */
 
-
-.Infobulle1 {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.Infobulle1 .Infobulle1Texte {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-.Infobulle1 .Infobulle1Texte::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-}
-
-.Infobulle1:hover .Infobulle1Texte {
-  visibility: visible;
-}
-.ImgMonstre{
-display: flex;
-justify-content: center;
-
-}
