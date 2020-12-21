@@ -1,14 +1,12 @@
 body {
-  background-image: url("https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png");
+  background-image: url("https://opengameart.org/sites/default/files/battleback2.png");
   background-repeat: no-repeat;
   background-size: cover;
+  border : solid red;
+  min-height: 100vh;
 }
 
-p{
-	margin: -45px -40px;
-	color: #FFFFFF;
-	front-family: arial ;
-}
+/* les différentes boites*/
 
 .box{
 	position: relative;
@@ -87,11 +85,13 @@ p{
   border-radius: 10px;
   padding: 45px;
   position: absolute;
-  top: -550px;
-  left: 140px;
+  top: -470px;
+  left: 500px;
   text-align: center;
   opacity: 0.75
 }
+
+/* gestion des ennemis*/
 
 .container{
 	position: relative;
@@ -106,25 +106,100 @@ p{
 .progress{
   position: relative;
 }
-.VieDuMonstre1{
-   background-color: #000000;
-  width: 300px;
-  border: 5px solid white;
-  border-radius: 10px;
-  padding: 45px;
-  position: absolute;
-  top: -550px;
-  left: 140px;
-  text-align: center;
-  opacity: 0.75
+
+
+.Ennemis1{
+
+position: relative;
+padding: 0px;
+left: -100px;
+top: -300px;
+
 }
 
-.Infobulle{
-  display: flex;
+.Ennemis2{
+
+position: relative;
+padding: 0px;
+left: 0px;
+top: -400px;
+
+}
+
+.Ennemis3{
+
+position: relative;
+padding: 0px;
+left: 0px;
+top: -400px;
+
+}
+
+
+/* Les bouttons*/
+
+.btn1{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 0.8em;
+  height: 0.5%;
+  
+  position: static;
+  top: 515px;
+  left: 425px;
+  
+  opacity: 0.85;
+}
+
+
+
+.btn1:hover{
+  filter: brightness(1.5);
+}
+
+
+
+/* Les infobulles*/
+
+
+.Infobulle1 {
   position: relative;
-  background-color: #000000;
-  border: 5px solid white;
-  border-radius: 10px;
-  text-align: center;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.Infobulle1 .Infobulle1Texte {
   visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.Infobulle1 .Infobulle1Texte::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.Infobulle1:hover .Infobulle1Texte {
+  visibility: visible;
+}
+.ImgMonstre{
+display: flex;
+justify-content: center;
+
 }
