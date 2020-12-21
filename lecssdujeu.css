@@ -3,33 +3,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border : solid red;
-  min-height: 100vh;
+  min-height: 97vh;
 }
 
 /* les différentes boites*/
 
-.box{
-  background-color: #000000;
-  width: 400px;
-  border: 5px solid white;
-  border-radius: 10px;
-  padding: 50px;
-  margin: 20px;
-  position: absolute;
-  top: 0px ;
-  left: 20px;
-}
-
 
 .box2{
   background-color: #000000;
-  width: 300px;
+  width: 50px;
   border: 5px solid white;
   border-radius: 10px;
-  padding: 100px;
+  padding: 50px;
   position: absolute;
   top: 50px;
   left: 40px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: calibri (corps) ;
 }
 
 
@@ -70,7 +64,12 @@ body {
   position: absolute;
   top: 20px;
   left: 70%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: calibri (corps) ;
+  font-size: 130%;
   opacity: 0.75
 }
 
@@ -115,15 +114,64 @@ body {
   opacity: 0.75
 }
 
+#Victoire{
+  background-color: #000000;
+  border: 5px solid white;
+  border-radius: 10px;
+  width: 400px;
+  padding: 45px;
+
+  position: absolute;
+  top: 300px;
+  left: 550px;
+
+  text-align: center;
+  color : #efd807;
+  font-family: calibri (corps) ;
+  font-size: 300%;
+  opacity: 0.75;
+  visibility: hidden;
+}
+
+#Defaite{
+  background-color: #000000;
+  border: 5px solid white;
+  border-radius: 10px;
+  width: 400px;
+  padding: 45px;
+
+  position: absolute;
+  top: 300px;
+  left: 550px;
+
+  text-align: center;
+  color : #FF0000;
+  font-family: calibri (corps) ;
+  font-size: 300%;
+  opacity: 0.75;
+  visibility: hidden;
+}
+
 /* gestion des ennemis*/
 
+.Ennemis{
+  position: absolute;
+  top: 50px;
+  left:40px;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #FFFFFF;
+}
 
 .Ennemis1{
 position: absolute;
 padding: 0px;
 top: 400px;
 left: 570px;
-
+visibility: visible;
 }
 
 .Ennemis2{
@@ -131,6 +179,7 @@ position: absolute;
 padding: 0px;
 top: 350px;
 left: 770px;
+visibility: visible;
 }
 
 .Ennemis3{
@@ -138,33 +187,146 @@ position: absolute;
 padding: 0px;
 top: 400px;
 left: 970px;
+visibility: visible;
 }
 
 
 /* Les bouttons*/
 
-.btn1{
+.btnAttaque{
   background: #000000;
   color: #FFFFFF;
   border-radius: 0.4em;
-  padding: 0.8em;
+  padding: 15px;
+  width: 129px;
   height: 0.5%;
   
-  position: relative;
-  top: -500px;
-  left: 425px;
+  position: absolute;
+  top: 565px;
+  left: 445px;
   
-  opacity: 0.85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.75;
 }
 
+.btnDefense{
+  background: #000000;
+  color: #FFFFFF;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 600px;
+  left: 445px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  opacity: 0.75;
+}
+.btnMagie{
+  background: #000000;
+  color: #FFFFFF;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 636px;
+  left: 445px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.75;
+}
+
+.btnObjet{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 670px;
+  left: 445px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.75;
+}
 
 .btn1:hover{
   filter: brightness(1.5);
 }
 
 
+.btnSlime{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 565px;
+  left: 445px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  opacity: 0.75;
+}
+
+.btnSlume{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 565px;
+  left: 445px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.75;
+}
+
+.btnFlime{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 565px;
+  left: 445px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.75;
+}
 /* Les infobulles*/
 
 
