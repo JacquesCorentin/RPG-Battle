@@ -29,3 +29,4 @@ var choixMonstres = 0
 
 var monstre = 0
 var tour = 0
+
