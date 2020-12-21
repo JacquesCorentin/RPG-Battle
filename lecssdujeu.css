@@ -9,11 +9,6 @@ body {
 /* les différentes boites*/
 
 .box{
-	position: relative;
-}
-
-
-.box{
   background-color: #000000;
   width: 400px;
   border: 5px solid white;
@@ -25,9 +20,6 @@ body {
   left: 20px;
 }
 
-.box2{
-	position: relative;
-}
 
 .box2{
   background-color: #000000;
@@ -40,9 +32,6 @@ body {
   left: 40px;
 }
 
-.box3{
-	position: relative;
-}
 
 .box3{
   background-color: #000000;
@@ -51,15 +40,12 @@ body {
   border-radius: 10px;
   padding: 50px;
   position: absolute;
-  top: 460px;
-  left: 340px;
+  top: 560px;
+  left: 440px;
   text-align: center;
   opacity: 0.75
 }
 
-.box4{
-	position: relative;
-}
 
 .box4{
   background-color: #000000;
@@ -68,15 +54,12 @@ body {
   border-radius: 10px;
   padding: 59px;
   position: absolute;
-  top: -5px;
-  left: 140px;
+  top: 560px;
+  left: 590px;
   text-align: center;
-
+  opacity: 0.75
 }
 
-.box5{
-	position: relative;
-}
 
 .box5{
   background-color: #000000;
@@ -85,54 +68,76 @@ body {
   border-radius: 10px;
   padding: 45px;
   position: absolute;
-  top: -470px;
-  left: 500px;
+  top: 20px;
+  left: 70%;
+  text-align: center;
+  opacity: 0.75
+}
+
+
+
+.boxMonstre1{
+  background-color: #000000;
+  width: 30px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 45px;
+  position: absolute;
+  top: -100px;
+  left: -33px;
+  text-align: center;
+  opacity: 0.75
+}
+
+.boxMonstre2{
+  background-color: #000000;
+  width: 30px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 45px;
+  position: absolute;
+  top: -100px;
+  left: -33px;
+  text-align: center;
+  opacity: 0.75
+}
+
+.boxMonstre3{
+  background-color: #000000;
+  width: 30px;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 45px;
+  position: absolute;
+  top: -100px;
+  left: -33px;
   text-align: center;
   opacity: 0.75
 }
 
 /* gestion des ennemis*/
 
-.container{
-	position: relative;
-}
-
-.container > img{
-	position: absolute;
-	top: 0px ;
-	left: 150px ;
-	
-}
-.progress{
-  position: relative;
-}
-
 
 .Ennemis1{
-
-position: relative;
+position: absolute;
 padding: 0px;
-left: -100px;
-top: -300px;
+top: 400px;
+left: 570px;
 
 }
 
 .Ennemis2{
-
-position: relative;
+position: absolute;
 padding: 0px;
-left: 0px;
-top: -400px;
-
+top: 350px;
+left: 770px;
 }
 
 .Ennemis3{
-
-position: relative;
+position: absolute;
 padding: 0px;
-left: 0px;
-top: -400px;
-
+top: 400px;
+left: 970px;
 }
 
 
@@ -145,8 +150,8 @@ top: -400px;
   padding: 0.8em;
   height: 0.5%;
   
-  position: static;
-  top: 515px;
+  position: relative;
+  top: -500px;
   left: 425px;
   
   opacity: 0.85;
