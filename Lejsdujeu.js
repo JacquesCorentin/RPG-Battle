@@ -36,6 +36,10 @@ var monstre = 0
 var tour = 0
 
 // Les infobulles //
+var monElementAudio = document.getElementById('music');
+monElementAudio.volume = 0.1
+var monElementAudio = document.getElementById('music');
+monElementAudio.autoplay = true
 
 monstre1.onmouseover = function(){
   document.getElementById("boxMonstre1").style.visibility = "visible" ;
