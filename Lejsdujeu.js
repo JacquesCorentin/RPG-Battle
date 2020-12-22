@@ -126,8 +126,3 @@ choixMoun.onclick = function(){
 }
 
 // Attaque //
-attaquer.onclick = function(){
-  tour + 1
-  if (joueur ==) {}
-}
-
