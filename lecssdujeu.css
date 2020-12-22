@@ -2,8 +2,8 @@ body {
   background-image: url("https://opengameart.org/sites/default/files/battleback2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  border : solid red;
-  min-height: 97vh;
+  /*border : solid red;
+  min-height: 97vh;*/
 }
 
 /* les différentes boites*/
@@ -40,7 +40,7 @@ body {
 
 .box4{
   background-color: #000000;
-  width: 330px;
+  width: 478px;
   border: 5px solid white;
   border-radius: 10px;
   padding: 59px;
@@ -156,6 +156,63 @@ body {
   visibility: hidden;
 }
 
+PV{
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 39.2%; 
+  color: white;
+  position: relative;
+  top: 530px;
+  left: 585px;
+
+}
+
+MANA{
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 39.2%; 
+  color: white;
+  position: relative;
+  top: 530px;
+  left: 585px;
+  align-items: center;
+}
+
+
+DEF{
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 39.2%; 
+  color: white;
+  position: relative;
+  top: 530px;
+  left: 585px;
+  align-items: center;
+}
+
+LVL{
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 35px;
+  width: 38.6%; 
+
+  position: absolute;
+  top: 663px;
+  left: 595px;
+  color: white;
+  align-items: center;
+}
 /* Les infobulles */
 
 .Ennemis{
@@ -203,7 +260,7 @@ visibility: visible;
 
 /* Les bouttons*/
 
-.btnAttaque{
+#btnAttaque{
   background: #000000;
   color: #FFFFFF;
   border-radius: 0.4em;
@@ -223,7 +280,7 @@ visibility: visible;
   opacity: 0.75;
 }
 
-.btnDefense{
+#btnDefense{
   background: #000000;
   color: #FFFFFF;
   padding: 15px;
@@ -240,7 +297,7 @@ visibility: visible;
 
   opacity: 0.75;
 }
-.btnMagie{
+#btnMagie{
   background: #000000;
   color: #FFFFFF;
   padding: 15px;
@@ -258,7 +315,7 @@ visibility: visible;
   opacity: 0.75;
 }
 
-.btnObjet{
+#btnObjet{
   background: #000000;
   color: #FFFFFF;
   border-radius: 0.4em;
@@ -281,6 +338,88 @@ visibility: visible;
   filter: brightness(1.5);
 }
 
+#btnFeu{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 525px;
+  left: 605px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  opacity: 0.75;
+  visibility: hidden;
+}
+#btnGlace{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 525px;
+  left: 900px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  opacity: 0.75;
+  visibility: hidden;
+}
+
+#btnPoison{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 525px;
+  left: 755px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  opacity: 0.75;
+  visibility: hidden;
+}
+
+#btnSoin{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 129px;
+  height: 0.5%;
+  
+  position: absolute;
+  top: 525px;
+  left: 1049px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  opacity: 0.75;
+  visibility: hidden;
+}
 
 #btnSlime{
   background: #000000;
@@ -393,6 +532,26 @@ visibility: visible;
   position: absolute;
   top:  565px;
   left: 892px;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.75;
+}
+
+#btnMoun{
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 0.4em;
+  padding: 15px;
+  width: 150px;
+  height: 0.5%;
+  
+  position: absolute;
+  top:  565px;
+  left: 1041px;
   z-index: 3;
 
   display: flex;
