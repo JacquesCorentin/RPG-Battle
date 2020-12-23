@@ -36,7 +36,7 @@ var hpJoueurs = [0, 150, 150, 150, 150]
 
 //dmg//
 var attaqueJoueurs = [10, 25, 5, 2 ,25] 
-var attaqueMonstres = [5, 10, 15, 20 ,25]
+var attaqueMonstres = [5, 10, 15, 20]
 //spe//
 var attaqueSpe = document.getElementById("AttSpe")
 var attaqueMagique = document.getElementById("btnMagie")
@@ -45,7 +45,7 @@ var dmgFeu = 15
 var dmgGlace = 20
 var soin = 25
 
-var DefPerso = 10
+var DefPerso = 5
 //cible//
 var cibleJoueurs = 0
 var cibleMonstres = 0
@@ -56,8 +56,16 @@ var monstre = 0
 var tour = 0
 
 // Les infobulles //
-var monElementAudio = document.getElementById('music');
+var monElementAudio = document.getElementById("music");
 monElementAudio.volume = 0.1
+
+var maVicroire = document.getElementById("musicVictoire");
+maVicroire.volume = 0.1
+maVicroire.style.visibility = "hidden"
+
+var maDefaite = document.getElementById("musicDefaite");
+maDefaite.volume = 0.1
+maDefaite.style.visibility = "hidden"
 
 
 monstre1.onmouseover = function(){
@@ -192,7 +200,7 @@ attaquer.onclick = function(){
     tour ++
     monstre ++
     if (hpMonstres[1]>0) {
-    cibleMonstres = Math.floor(Math.random() * 3) + 1
+    cibleMonstres = Math.floor(Math.random() * 4) + 1
     hpJoueurs[cibleMonstres] -= attaqueMonstres[monstre]
     document.getElementById("PVJustin").innerHTML = hpJoueurs[1]
     document.getElementById("PVKevin").innerHTML = hpJoueurs[2]
@@ -201,7 +209,7 @@ attaquer.onclick = function(){
   }
     monstre++
     if (hpMonstres[2]>0) {
-    cibleMonstres = Math.floor(Math.random() * 3) + 1
+    cibleMonstres = Math.floor(Math.random() * 4) + 1
     hpJoueurs[cibleMonstres] -= attaqueMonstres[monstre]
     document.getElementById("PVJustin").innerHTML = hpJoueurs[1]
     document.getElementById("PVKevin").innerHTML = hpJoueurs[2]
@@ -210,7 +218,7 @@ attaquer.onclick = function(){
   }
     monstre++
     if (hpMonstres[3]>0) {
-    cibleMonstres = Math.floor(Math.random() * 3) + 1
+    cibleMonstres = Math.floor(Math.random() * 4) + 1
     hpJoueurs[cibleMonstres] -= attaqueMonstres[monstre]
     document.getElementById("PVJustin").innerHTML = hpJoueurs[1]
     document.getElementById("PVKevin").innerHTML = hpJoueurs[2]
@@ -248,10 +256,33 @@ attaquer.onclick = function(){
     document.getElementById("btnAttaque").style.visibility = "hidden"
     document.getElementById("btnDefense").style.visibility = "hidden"
     document.getElementById("btnPoison").style.visibility = "hidden" 
+    document.getElementById("btnObjet").style.visibility = "hidden" 
+    document.getElementById("btnMagie").style.visibility = "hidden" 
+    document.getElementById("music").style.visibility = "hidden"
+    document.getElementById("musicVictoire").style.visibility = "visible"
+
+  }
+
+  if (hpJoueurs[1] <= 0 && hpJoueurs[2] <=0 && hpJoueurs[3] <=0) {
+    document.getElementById("Defaite").style.visibility = "visible"
+    document.getElementById("btnAttaque").style.visibility = "hidden"
+    document.getElementById("btnDefense").style.visibility = "hidden"
+    document.getElementById("btnPoison").style.visibility = "hidden"
+    document.getElementById("boxMonstre1").style.visibility = "hidden"
+    monstre1.style.visibility = "hidden"
+    document.getElementById("boxMonstre2").style.visibility = "hidden"
+    monstre2.style.visibility = "hidden"
+    document.getElementById("boxMonstre3").style.visibility = "hidden"
+    document.getElementById("btnObjet").style.visibility = "hidden" 
+    document.getElementById("btnMagie").style.visibility = "hidden" 
+    monstre3.style.visibility = "hidden"
+    document.getElementById("music").style.visibility = "hidden"
+    document.getElementById("musicDefaite").style.visibility = "visible"
 
   }
 }
 
+// Attaque Spe //
 poison.onclick = function(){
   hpMonstres[cibleJoueurs] -= dmgPoison
   manaKevin -= 25
@@ -293,18 +324,21 @@ glace.onclick = function(){
 }
 
 soin.onclick = function(){
-  hpJoueurs[joueur] += soin
+  hpMonstres[cibleJoueurs] += soin
   manaMoun -= 25
-  document.getElementById("PVJustin").innerHTML = " "+hpJoueurs[1]+" "///
-  document.getElementById("PVKevin").innerHTML = " "+hpJoueurs[1]+" "
-  document.getElementById("PVVentux").innerHTML = " "+hpJoueurs[1]+" "
+  document.getElementById("PVSlime").innerHTML = " "+hpMonstres[1]+" "///
+  document.getElementById("PVSlume").innerHTML = " "+hpMonstres[2]+" "
+  document.getElementById("PVFlime").innerHTML = " "+hpMonstres[3]+" "
   if (manaMoun <=0) {
    document.getElementById("btnSoin").style.visibility = "hidden"  
    document.getElementById("btnSoin").style.opacity = 0 
   }
 }
 
+// Defense //
 defense.onclick = function(){
   hpJoueurs[joueur] += DefPerso
   document.getElementById("btnDefense").style.visibility = "hidden"
 }
+
+
