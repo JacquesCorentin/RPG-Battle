@@ -55,6 +55,8 @@ var joueur = 1
 var monstre = 0
 var tour = 0
 var mortJoueur = [false, false, false, false]
+var PVmin = 0
+var PVmax = 150
 
 // Les infobulles //
 var monElementAudio = document.getElementById("music");
@@ -188,22 +190,22 @@ function toursJ(joueur){
 // Attaque //
 attaquer.onclick = function(){
   joueur ++
-  if (hpJoueurs[1]<=0) {
+  if (hpJoueurs[1]<= PVmin) {
     joueur ++
     document.getElementById("btnJustin").style.visibility = "hidden"
     document.getElementById("PVJustin").style.visibility = "hidden"
   }
-  if (hpJoueurs[2]<=0) {
+  if (hpJoueurs[2]<=PVmin) {
     joueur ++
     document.getElementById("btnKevin").style.visibility = "hidden"
     document.getElementById("PVKevin").innerHTML = 0
   }
-  if (hpJoueurs[3]<=0) {
+  if (hpJoueurs[3]<=PVmin) {
     joueur ++
     document.getElementById("btnVentux").style.visibility = "hidden"
     document.getElementById("PVVentux").innerHTML = 0
   }
-  if (hpJoueurs[4]<=0) {
+  if (hpJoueurs[4]<=PVmin) {
     joueur ++
     document.getElementById("btnMoun").style.visibility = "hidden"
    document.getElementById("PVMoun").innerHTML = 0
@@ -275,7 +277,7 @@ attaquer.onclick = function(){
 
   }
 
-  if (hpJoueurs[1] <= 0 && hpJoueurs[2] <=0 && hpJoueurs[3] <=0) {
+  if (hpJoueurs[1] <= PVmin && hpJoueurs[2] <=PVmin && hpJoueurs[3] <=PVmin) {
     document.getElementById("Defaite").style.visibility = "visible"
     document.getElementById("btnAttaque").style.visibility = "hidden"
     document.getElementById("btnDefense").style.visibility = "hidden"
@@ -363,5 +365,3 @@ defense.onclick = function(){
   hpJoueurs[joueur] -= attaqueMonstres[monstre]
   document.getElementById("btnDefense").style.visibility = "hidden"
 }
-
-
