@@ -35,7 +35,7 @@ var hpMonstres = [0, 100, 100, 100]
 var hpJoueurs = [0, 150, 150, 150, 150]
 
 //dmg//
-var attaqueJoueurs = [10, 25, 5, 2 ,25] 
+var attaqueJoueurs = [10, 25, 5, 2 ,30] 
 var attaqueMonstres = [5, 10, 15, 20]
 //spe//
 var attaqueSpe = document.getElementById("AttSpe")
@@ -335,8 +335,6 @@ glace.onclick = function(){
  }
 }
 
-
-// Defense //
 soin.onclick = function(){
   hpJoueurs[joueur] = hpJoueurs[joueur] + dmgSoin
   manaMoun -= 25
@@ -349,6 +347,21 @@ soin.onclick = function(){
     document.getElementById("btnSoin").style.visibility = "hidden"
     document.getElementById("btnSoin").style.opacity = 0
   }
+}
+
+
+// Defense //
+
+defense.onclick = function(){
+  if (attaqueMonstres[monstre] <= DefPerso) {
+    attaqueMonstres[monstre] = 0
+  }
+  if (attaqueMonstres[monstre > DefPerso]) {
+    DefPerso = 0
+  }
+  attaqueMonstres[monstre] -= DefPerso
+  hpJoueurs[joueur] -= attaqueMonstres[monstre]
+  document.getElementById("btnDefense").style.visibility = "hidden"
 }
 
 
