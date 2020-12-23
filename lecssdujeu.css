@@ -170,6 +170,10 @@ PV{
 
 }
 
+#PVJustin{
+  visibility: visible;
+}
+
 MANA{
   border: 2px solid white;
   display: flex;

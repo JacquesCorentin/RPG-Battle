@@ -43,7 +43,7 @@ var attaqueMagique = document.getElementById("btnMagie")
 var dmgPoison = 7
 var dmgFeu = 15
 var dmgGlace = 20
-var soin = 25
+var dmgSoin = 25
 
 var DefPerso = 5
 //cible//
@@ -54,6 +54,7 @@ var cibleMonstres = 0
 var joueur = 1
 var monstre = 0
 var tour = 0
+var mortJoueur = [false, false, false, false]
 
 // Les infobulles //
 var monElementAudio = document.getElementById("music");
@@ -149,7 +150,7 @@ choixMoun.onclick = function(){
   document.getElementById("btnDefense").style.visibility = "visible"
 }
 // Tours de jeu //
-function toursJoueurs(joueur){
+function toursJ(joueur){
   document.getElementById("btnPoison").style.visibility = "hidden" 
   document.getElementById("btnFeu").style.visibility = "hidden"
   document.getElementById("btnSoin").style.visibility = "hidden"
@@ -171,6 +172,9 @@ function toursJoueurs(joueur){
   if (joueur == 3){
     document.getElementById("btnSoin").style.visibility = "visible"
     document.getElementById("btnDefense").style.visibility = "visible"
+    if (manaMoun <= 0) {
+      document.getElementById("btnSoin").style.visibility = "hidden"
+    }
   }
   if (joueur == 4){
     document.getElementById("btnGlace").style.visibility = "visible"
@@ -186,15 +190,23 @@ attaquer.onclick = function(){
   joueur ++
   if (hpJoueurs[1]<=0) {
     joueur ++
+    document.getElementById("btnJustin").style.visibility = "hidden"
+    document.getElementById("PVJustin").style.visibility = "hidden"
   }
   if (hpJoueurs[2]<=0) {
     joueur ++
+    document.getElementById("btnKevin").style.visibility = "hidden"
+    document.getElementById("PVKevin").innerHTML = 0
   }
   if (hpJoueurs[3]<=0) {
     joueur ++
+    document.getElementById("btnVentux").style.visibility = "hidden"
+    document.getElementById("PVVentux").innerHTML = 0
   }
   if (hpJoueurs[4]<=0) {
     joueur ++
+    document.getElementById("btnMoun").style.visibility = "hidden"
+   document.getElementById("PVMoun").innerHTML = 0
   }
   if (joueur == 5){
     tour ++
@@ -228,7 +240,7 @@ attaquer.onclick = function(){
     monstre = 0
     joueur = 1
   }
-  toursJoueurs(joueur)
+  toursJ(joueur)
 
   hpMonstres[cibleJoueurs] -= attaqueJoueurs[joueur]
   document.getElementById("PVSlime").innerHTML = " "+hpMonstres[1]+" "////
@@ -323,22 +335,20 @@ glace.onclick = function(){
  }
 }
 
-soin.onclick = function(){
-  hpMonstres[cibleJoueurs] += soin
-  manaMoun -= 25
-  document.getElementById("PVSlime").innerHTML = " "+hpMonstres[1]+" "///
-  document.getElementById("PVSlume").innerHTML = " "+hpMonstres[2]+" "
-  document.getElementById("PVFlime").innerHTML = " "+hpMonstres[3]+" "
-  if (manaMoun <=0) {
-   document.getElementById("btnSoin").style.visibility = "hidden"  
-   document.getElementById("btnSoin").style.opacity = 0 
-  }
-}
 
 // Defense //
-defense.onclick = function(){
-  hpJoueurs[joueur] += DefPerso
-  document.getElementById("btnDefense").style.visibility = "hidden"
+soin.onclick = function(){
+  hpJoueurs[joueur] = hpJoueurs[joueur] + dmgSoin
+  manaMoun -= 25
+  document.getElementById("PVJustin").innerHTML = " "+hpJoueurs[1]+" "///
+  document.getElementById("PVKevin").innerHTML = " "+hpJoueurs[2]+" "
+  document.getElementById("PVVentux").innerHTML = " "+hpJoueurs[3]+" "
+  document.getElementById("PVMoun").innerHTML = " "+hpJoueurs[4]+" "
+  document.getElementById("MANAMoun").innerHTML = " "+manaMoun+" "
+  if (manaMoun <= 0) {
+    document.getElementById("btnSoin").style.visibility = "hidden"
+    document.getElementById("btnSoin").style.opacity = 0
+  }
 }
 
 
